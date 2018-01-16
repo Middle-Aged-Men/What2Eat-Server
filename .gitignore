@@ -1,0 +1,13 @@
+.idea
+What2Eat-Server.iml
+What2Eat-common/What2Eat-common.iml
+What2Eat-common/target/
+What2Eat-dao/What2Eat-dao.iml
+What2Eat-dao/target/
+What2Eat-entity/What2Eat-entity.iml
+What2Eat-entity/target/
+What2Eat-parent.iml
+What2Eat-service/What2Eat-service.iml
+What2Eat-service/target/
+What2Eat-web/What2Eat-web.iml
+What2Eat-web/target/

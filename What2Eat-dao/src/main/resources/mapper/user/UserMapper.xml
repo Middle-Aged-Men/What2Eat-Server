@@ -11,7 +11,7 @@
     <insert id="insert" parameterType="com.middle.aged.men.entity.user.User">
       INSERT INTO
       user (union_id,create_time)
-      VALUES (#{unionId},#{createTime});=
+      VALUES (#{unionId},#{createTime});
     </insert>
 
 

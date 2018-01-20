@@ -2,6 +2,7 @@ package com.middle.aged.men.web.controller.user;
 
 import com.middle.aged.men.entity.model.Message;
 import com.middle.aged.men.entity.model.ResultModel;
+import com.middle.aged.men.entity.user.vo.UserVo;
 import com.middle.aged.men.service.user.UserService;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
@@ -25,8 +26,8 @@ public class UserController {
 
     @RequestMapping(value = "addUser", method = RequestMethod.POST)
     @ApiOperation(value = "添加用户", notes = "unionid")
-    public Message addUser(@ApiParam("unionId")@RequestBody String unoinId) {
-        ResultModel resultModel = userService.addUser(unoinId);
+    public Message addUser(@RequestBody UserVo userVo) {
+        ResultModel resultModel = userService.addUser(userVo.getUnionId());
         return resultModel.toMessage();
     }
 

@@ -1,10 +1,23 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <!--mybatis-->
- <mapper namespace="com.middle.aged.men.mapper.UserMapper">
+ <mapper namespace="com.middle.aged.men.dao.user.UserMapper">
     <resultMap id="BaseResultMap" type="com.middle.aged.men.entity.user.User">
-        <result column="id" jdbcType="INTEGER" property="id" />
-        <result column="name" jdbcType="VARCHAR" property="name" />
+        <result column="user_id" jdbcType="INTEGER" property="userId" />
+        <result column="union_id" jdbcType="VARCHAR" property="unionId" />
+        <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
     </resultMap>
+
+    <insert id="insert" parameterType="com.middle.aged.men.entity.user.User">
+      INSERT INTO
+      user (union_id,create_time)
+      VALUES (#{unionId},#{createTime});=
+    </insert>
+
+
+    <select id="getUserList" resultMap="BaseResultMap" >
+        SELECT  * FROM
+         user where 1 =1
+    </select>
 
 </mapper>
